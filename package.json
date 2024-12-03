@@ -1,6 +1,6 @@
 {
   "name": "next-table",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A reusable DataTable component for Next.js with Tailwind CSS support.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
