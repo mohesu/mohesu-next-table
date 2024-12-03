@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".", // Base directory for resolving non-relative imports
+        "paths": {
+            "@/*": [
+                "src/*"
+            ] // Map @/ to the src/ directory
+        },
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "strict": true,
+        "jsx": "react",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
