@@ -1,26 +1,30 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".", // Base directory for resolving non-relative imports
-        "paths": {
-            "@nt/*": [
-                "src/*"
-            ] // Map @/ to the src/ directory
-        },
-        "target": "ESNext",
-        "module": "ESNext",
-        "moduleResolution": "Node",
-        "strict": true,
-        "jsx": "react",
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "resolveJsonModule": true,
-    },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.tsx"
-    ],
-    "exclude": [
-        "node_modules",
-        "dist"
-    ]
+  "compilerOptions": {
+    /* Base Options */
+    "target": "ES2022", // Ensure the output is modern
+    "module": "ESNext", // Match the ES module format
+    "moduleResolution": "Node", // Use Node-style module resolution
+    "jsx": "react", // If you're using React
+    "esModuleInterop": true, // Allow ES6 imports
+    "resolveJsonModule": true, // Allow importing JSON files
+    "skipLibCheck": true, // Skip type checking for dependencies
+    "strict": true, // Enforce type safety
+    /* Path Aliases */
+    "baseUrl": ".", // Base directory
+
+    /* Output Options */
+    "declaration": true, // Generate type declarations
+    "outDir": "dist", // Output directory for compiled files
+    "declarationDir": "dist", // Output directory for types
+    /* Include Library Features */
+    "lib": ["dom", "dom.iterable", "es2022"]
+  },
+  "include": [
+    "src/**/*.ts", // Include all TypeScript files
+    "src/**/*.tsx" // Include all React TSX files
+  ],
+  "exclude": [
+    "node_modules", // Exclude dependencies
+    "dist" // Exclude output files
+  ]
 }

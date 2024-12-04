@@ -20,7 +20,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@nt/ui/table";
+} from "../../ui/table";
 
 import { DataTablePagination } from "./data-table-pagination";
 import {
@@ -86,9 +86,6 @@ export function DataTable<TData, TValue>({
     getFacetedUniqueValues: getFacetedUniqueValues(),
   });
 
-
-
-
   return (
     <div className="w-full space-y-4">
       <DataTableToolbar
@@ -99,9 +96,7 @@ export function DataTable<TData, TValue>({
         setNewFilters={setNewFilters}
         filters={filters}
       />
-      <div
-        className="rounded-md border w-full overflow-x-scroll"
-      >
+      <div className="rounded-md border w-full overflow-x-scroll">
         <div className="w-full">
           <table className="w-full bg-gray-50 dark:bg-card ">
             <TableHeader>
@@ -109,14 +104,17 @@ export function DataTable<TData, TValue>({
                 <TableRow key={headerGroup.id}>
                   {headerGroup.headers.map((header) => {
                     return (
-                      <TableHead key={header.id} colSpan={header.colSpan} className="px-4  text-sm text-nowrap
-      font-bold  text-black dark:text-white" >
+                      <TableHead
+                        key={header.id}
+                        colSpan={header.colSpan}
+                        className="px-4  text-sm text-nowrap
+      font-bold  text-black dark:text-white">
                         {header.isPlaceholder
                           ? null
                           : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                              header.column.columnDef.header,
+                              header.getContext()
+                            )}
                       </TableHead>
                     );
                   })}
@@ -124,33 +122,20 @@ export function DataTable<TData, TValue>({
               ))}
             </TableHeader>
             {table.getRowModel().rows?.length ? (
-              <TableBody >
-                {
-                  table.getRowModel().rows.map((row) => (
-                    <TableRow
-                      key={row.id}
-                      data-state={row.getIsSelected() && "selected"}
-                    >
-                      {
-                        row.getVisibleCells().map((cell) => (
-                          <TableCell key={cell.id}
-
-                            className="w-min"
-                          >
-                            {
-
-                              flexRender(
-                                cell.column.columnDef.cell,
-                                cell.getContext()
-                              )
-
-                            }
-
-
-                          </TableCell>
-                        ))
-                      }
-                      {/* {row.getVisibleCells().map((cell) => (
+              <TableBody>
+                {table.getRowModel().rows.map((row) => (
+                  <TableRow
+                    key={row.id}
+                    data-state={row.getIsSelected() && "selected"}>
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell key={cell.id} className="w-min">
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </TableCell>
+                    ))}
+                    {/* {row.getVisibleCells().map((cell) => (
                         <TableCell key={cell.id}>
                           {flexRender(
                             cell.column.columnDef.cell,
@@ -158,29 +143,27 @@ export function DataTable<TData, TValue>({
                           )}
                         </TableCell>
                       ))} */}
-                    </TableRow>
-                  ))}
-
+                  </TableRow>
+                ))}
               </TableBody>
             ) : (
-
               <TableBody>
                 <TableRow>
-
                   <TableCell
                     colSpan={columns.length}
-                    className="h-24 text-center "
-                  >
+                    className="h-24 text-center ">
                     <div className="flex flex-col items-center justify-center p-4">
-                      <Image src="/not_found.png" height={200} width={200} alt="not found" />
+                      <Image
+                        src="/not_found.png"
+                        height={200}
+                        width={200}
+                        alt="not found"
+                      />
                       <p className="font-medium text-2xl pt-2 ">No results</p>
                     </div>
-
                   </TableCell>
                 </TableRow>
-
               </TableBody>
-
             )}
           </table>
         </div>
