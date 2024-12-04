@@ -2,7 +2,7 @@
     "compilerOptions": {
         "baseUrl": ".", // Base directory for resolving non-relative imports
         "paths": {
-            "@/*": [
+            "@nt/*": [
                 "src/*"
             ] // Map @/ to the src/ directory
         },

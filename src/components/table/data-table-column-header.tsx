@@ -6,15 +6,15 @@ import {
 } from "@radix-ui/react-icons";
 import { Column } from "@tanstack/react-table";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@nt/lib/utils";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from "@/ui/dropdown-menu";
-import { Button } from "@/ui/button";
+} from "@nt/ui/dropdown-menu";
+import { Button } from "@nt/ui/button";
 import React from "react";
 
 interface DataTableColumnHeaderProps<TData, TValue>

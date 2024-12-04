@@ -4,9 +4,9 @@ import * as React from "react";
 import { CheckIcon, PlusCircledIcon } from "@radix-ui/react-icons";
 import { Column } from "@tanstack/react-table";
 
-import { cn } from "@/lib/utils";
-import { Badge } from "@/ui/badge";
-import { Button } from "@/ui/button";
+import { cn } from "@nt/lib/utils";
+import { Badge } from "@nt/ui/badge";
+import { Button } from "@nt/ui/button";
 import {
     Command,
     CommandEmpty,
@@ -15,16 +15,16 @@ import {
     CommandItem,
     CommandList,
     CommandSeparator,
-} from "@/ui/command";
+} from "@nt/ui/command";
 import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from "@/ui/popover";
-import { Separator } from "@/ui/separator";
+} from "@nt/ui/popover";
+import { Separator } from "@nt/ui/separator";
 import { useEffect, useState } from "react";
 // import {Query} from "appwrite";
-import { CustomFilter, FacetedFilterDropDownOption } from "@/components/table/data-table-toolbar";
+import { CustomFilter, FacetedFilterDropDownOption } from "@nt/components/table/data-table-toolbar";
 
 export interface DataTableFacetedFilterProps<TData, TValue> {
     column?: Column<TData, TValue>;

@@ -19,7 +19,7 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/ui/table";
+} from "@nt/ui/table";
 
 import { DataTablePagination } from "./data-table-pagination";
 import {
