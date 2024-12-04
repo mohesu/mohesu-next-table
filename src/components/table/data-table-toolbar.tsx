@@ -1,4 +1,4 @@
-"use clients";
+"use client";
 
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { Table } from "@tanstack/react-table";
@@ -41,7 +41,7 @@ export interface FacetedFilterDropDownOption {
 }
 
 export type CustomFilter = (
-  isSelected: boolean,
+  isSelected: boolean
 ) => FacetedFilterDropDownOptionCustomFilter;
 export interface FacetedFilter {
   title: string;
@@ -110,8 +110,7 @@ export function DataTableToolbar<TData>({
                 onClearFilters();
               }
             }}
-            className="h-8 px-2 lg:px-3"
-          >
+            className="h-8 px-2 lg:px-3">
             Reset
             <Cross2Icon className="ml-2 h-4 w-4" />
           </Button>

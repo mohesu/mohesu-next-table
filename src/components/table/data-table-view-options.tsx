@@ -1,4 +1,4 @@
-"use clients";
+"use client";
 
 import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
 import { MixerHorizontalIcon } from "@radix-ui/react-icons";
@@ -24,11 +24,7 @@ export function DataTableViewOptions<TData>({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-          size="sm"
-          className="ml-auto  h-8 lg:flex"
-        >
+        <Button variant="outline" size="sm" className="ml-auto  h-8 lg:flex">
           <MixerHorizontalIcon className="mr-2 h-4 w-4" />
           View
         </Button>
@@ -48,8 +44,7 @@ export function DataTableViewOptions<TData>({
                 key={column.id}
                 className="capitalize"
                 checked={column.getIsVisible()}
-                onCheckedChange={(value) => column.toggleVisibility(!!value)}
-              >
+                onCheckedChange={(value) => column.toggleVisibility(!!value)}>
                 {column.id}
               </DropdownMenuCheckboxItem>
             );
