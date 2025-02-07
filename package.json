@@ -1,6 +1,6 @@
 {
   "name": "my-next-table-plugin",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "An extended shadcn UI table based on TanStack Table for Next.js.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
