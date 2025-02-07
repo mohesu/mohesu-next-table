@@ -2,16 +2,14 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
-    "moduleResolution": "Node",
-    "jsx": "react-jsx", // Enables JSX handling in TypeScript
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "declaration": true,
+    "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"] // Mapping custom paths
-    }
+    "resolveJsonModule": true
   },
   "include": [
     "src/**/*", // Ensure all your source files are included
